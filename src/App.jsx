@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+
+import PageLayout from "./components/PageLayout/PageLayout";
 
 function App() {
-  return (
-    <>popo</>
-  )
+  return <PageLayout />;
 }
 
-export default App
+export default App;
