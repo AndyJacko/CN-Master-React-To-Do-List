@@ -49,25 +49,25 @@ const ToDoListItem = ({ ch, cmp, dh, id, sh, txt }) => {
       <div className="todo-actions">
         {cmp && (
           <div onClick={checkedHandler}>
-            <i className="fa-regular fa-circle-check todo-save"></i>
+            <i className="fa-regular fa-circle-check todo-icon todo-save"></i>
           </div>
         )}
 
         {disabled && !cmp && (
           <div onClick={editHandler}>
-            <i className="fa-solid fa-pen todo-edit"></i>
+            <i className="fa-solid fa-pen todo-icon todo-edit"></i>
           </div>
         )}
 
         {!disabled && !cmp && (
           <div onClick={saveHandler}>
-            <i className="fa-solid fa-floppy-disk todo-save"></i>
+            <i className="fa-solid fa-floppy-disk todo-icon todo-save"></i>
           </div>
         )}
 
         {!cmp && (
           <div onClick={deleteHandler}>
-            <i className="fa-regular fa-trash-can todo-delete"></i>
+            <i className="fa-regular fa-trash-can todo-icon todo-delete"></i>
           </div>
         )}
       </div>

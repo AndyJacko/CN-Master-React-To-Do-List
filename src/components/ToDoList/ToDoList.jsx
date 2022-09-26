@@ -5,8 +5,8 @@ import AddToDo from "./AddToDo/AddToDo";
 import ToDoListItem from "./ToDoListItem/ToDoListItem";
 
 const DUMMY_TODOS = [
-  { id: 1, complete: false, text: "Go Shopping" },
-  { id: 2, complete: false, text: "Feed Spiders" },
+  { id: 1, complete: false, text: "Eat Cheese" },
+  { id: 2, complete: false, text: "Exercise On Wheel" },
   { id: 3, complete: false, text: "Find Pinky" },
   { id: 4, complete: false, text: "Take Over The World" },
 ];

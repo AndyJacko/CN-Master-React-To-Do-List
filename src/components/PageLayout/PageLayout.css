@@ -1,9 +1,20 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --green: #61ff41;
+  --darkgreen: #193f10;
+  --red: #ff6868;
+  --yellow: #fdf46c;
+  --background: #333333;
+  --shadow: #666666;
+}
+
 #page-container {
-  width: 600px;
+  width: 100%;
   border-radius: 10px;
-  border: 1px solid #000000;
-  background-color: #333333;
-  box-shadow: 0 0 10px #666666;
+  border: 1px solid var(--black);
+  background-color: var(--background);
+  box-shadow: 0 0 10px var(--shadow);
 }
 
 #header,
@@ -12,9 +23,20 @@
   padding: 10px;
 }
 
+#header {
+  color: var(--red);
+  font-family: "Rubik Dirt", cursive;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+#footer img {
+  width: 120px;
+}
+
 #todo-list {
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
 }
 
 #add-todo {
@@ -27,7 +49,7 @@
   margin: 0 5px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #000000;
+  border: 1px solid var(--black);
 }
 
 #add-todo input:focus {
@@ -36,16 +58,16 @@
 
 #add-todo button {
   padding: 10px;
-  background: #81ff68;
+  background: var(--green);
   border-radius: 5px;
-  border: 1px solid #000000;
+  border: 1px solid var(--black);
   cursor: pointer;
 }
 
 #add-todo button:hover {
-  color: #ffffff;
-  background: #224b19;
-  border: 1px solid #ffffff;
+  color: var(--white);
+  background: var(--darkgreen);
+  border: 1px solid var(--white);
 }
 
 .todo-item {
@@ -56,39 +78,61 @@
 }
 
 .todo-actions {
-  font-size: 20px;
+  font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.todo-edit {
-  margin: 0 5px;
-  color: #fdf46c;
+.todo-icon {
+  margin: 0 3px;
   cursor: pointer;
+}
+
+.todo-edit {
+  color: var(--yellow);
 }
 
 .todo-save {
-  margin: 0 5px;
-  color: #81ff68;
-  cursor: pointer;
+  color: var(--green);
 }
 
 .todo-delete {
-  margin: 0 5px;
-  color: #ff6868;
-  cursor: pointer;
+  color: var(--red);
 }
 
 .todo-input {
   padding: 5px;
   background: transparent;
   border: none;
-  color: #ffffff;
+  color: var(--white);
   font-weight: bold;
 }
 
 .checked {
-  color: #81ff68;
+  color: var(--green);
   text-decoration: line-through;
+}
+
+@media (min-width: 700px) {
+  #page-container {
+    width: 600px;
+  }
+
+  #header {
+    font-size: 60px;
+  }
+
+  #footer img {
+    width: 200px;
+  }
+
+  .todo-actions {
+    font-size: 20px;
+  }
+
+  .todo-icon {
+    margin: 0 5px;
+    cursor: pointer;
+  }
 }
