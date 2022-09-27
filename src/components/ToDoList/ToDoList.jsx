@@ -15,7 +15,7 @@ const ToDoList = () => {
   const [todos, setTodos] = useState(DUMMY_TODOS);
   const addToDo_ref = useRef();
 
-  const onSubmitHandler = (e) => {
+  const onAddHandler = (e) => {
     e.preventDefault();
 
     const addToDo = addToDo_ref.current.value;
@@ -47,7 +47,7 @@ const ToDoList = () => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  const checkedHandler = (id) => {
+  const onCheckedHandler = (id) => {
     const newTodos = [...todos];
 
     newTodos.forEach((todo) => {
@@ -61,7 +61,7 @@ const ToDoList = () => {
 
   return (
     <div id="todo-list">
-      <AddToDo rf={addToDo_ref} osh={onSubmitHandler} />
+      <AddToDo rf={addToDo_ref} ah={onAddHandler} />
       {todos.map((todo) => (
         <ToDoListItem
           key={todo.id}
@@ -70,7 +70,7 @@ const ToDoList = () => {
           cmp={todo.complete}
           sh={onSaveHandler}
           dh={onDeleteHandler}
-          ch={checkedHandler}
+          ch={onCheckedHandler}
         />
       ))}
     </div>
