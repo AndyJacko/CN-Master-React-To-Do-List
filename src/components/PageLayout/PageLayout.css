@@ -103,6 +103,7 @@
 
 .todo-input {
   padding: 5px;
+  width: 200px;
   background: transparent;
   border: none;
   color: var(--white);
@@ -134,5 +135,9 @@
   .todo-icon {
     margin: 0 5px;
     cursor: pointer;
+  }
+
+  .todo-input {
+    width: 400px;
   }
 }
