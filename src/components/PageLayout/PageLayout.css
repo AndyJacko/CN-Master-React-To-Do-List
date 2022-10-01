@@ -115,6 +115,11 @@
   text-decoration: line-through;
 }
 
+#instructions {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
 @media (min-width: 700px) {
   #page-container {
     width: 600px;
@@ -139,5 +144,9 @@
 
   .todo-input {
     width: 400px;
+  }
+
+  #instructions {
+    font-size: 12px;
   }
 }

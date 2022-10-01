@@ -61,6 +61,23 @@ const ToDoList = () => {
 
   return (
     <div id="todo-list">
+      <div id="instructions">
+        <h2>Instructions</h2>
+        <p>Add To-Do by entering details and clicking "Add To-Do".</p>
+        <p>
+          Click <i className="fa-solid fa-pen todo-icon todo-edit"></i> to
+          modify To-Do. Click{" "}
+          <i className="fa-solid fa-floppy-disk todo-icon todo-save"></i> to
+          save changes.
+        </p>
+        <p>
+          Click{" "}
+          <i className="fa-regular fa-trash-can todo-icon todo-delete"></i> to
+          remove a To-Do.
+        </p>
+        <p>Click To-Do item to toggle completed status.</p>
+      </div>
+
       <AddToDo rf={addToDo_ref} ah={onAddHandler} />
       {todos.map((todo) => (
         <ToDoListItem
